@@ -13,6 +13,7 @@
 // connect met database
 require("connect.php");
         if (isset($_POST['submit'])) {
+            // beveiliging tegen XSS en Injections
             $username = strip_tags($_POST['username']);
             $password = strip_tags($_POST['password']);
         }
