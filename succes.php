@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-
-
 <?php
 // Haal comments weg om te zien wat er bij de $_POST meegegeven wordt.
 //      var_dump($_POST);
-
 
 
 // connect met database
@@ -20,21 +16,15 @@ require("connect.php");
             $username = strip_tags($_POST['username']);
             $password = strip_tags($_POST['password']);
         }
-
-
-
-
-
+        
 // query de database
 $resultSet = $connect->query("SELECT * FROM `users`");
-
 
 
     while($rows = $resultSet->fetch_assoc()){
         $name = $rows['username'];
         $pass = $rows['password'];
     }
-
 
 
 if ($username === $name &&  md5($password) === $pass){
@@ -45,16 +35,6 @@ if ($username === $name &&  md5($password) === $pass){
 else {
     header("location: login.php");
 }
-
-
-
-
-
-
-
-
 ?>
-
-
 </body>
 </html>
