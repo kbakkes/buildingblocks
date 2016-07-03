@@ -4,8 +4,6 @@ $name = $_GET['name'];
 $score = $_GET['score'];
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,6 @@ $score = $_GET['score'];
 <body>
 
 <form class="container container-table" action="" method="post">
-
     <h4>Name:</h4>
     <input type="text" name="name" value="<?=$name?>">
     <h4>Score</h4>
@@ -24,16 +21,12 @@ $score = $_GET['score'];
     <br><br>
     <input type="submit" name="submit" value="Edit">
     </form>
-
 <?php
 
 if(isset($_POST['submit'])) {
 
-
     $new_name = htmlspecialchars($_POST['name']);
     $new_score = htmlspecialchars($_POST['score']);
-
-
 
 
     $highscoreConnect = mysqli_connect("localhost", "root", "", "plasticats");
@@ -44,13 +37,6 @@ if(isset($_POST['submit'])) {
 
     header("Location: succes.php");
 }
-
-
-
-
 ?>
-
-
-
 </body>
 </html>
