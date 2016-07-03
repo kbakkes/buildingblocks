@@ -2,12 +2,7 @@
 $id = $_GET['id'];
 $name = $_GET['name'];
 $score = $_GET['score'];
-
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +12,6 @@ $score = $_GET['score'];
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-
-
-
 
 <form class="container container-table" method="post" action="">
     <h2>Are you sure you want to delete this row?</h2>
@@ -36,15 +28,7 @@ if(isset($_POST['submit'])) {
     mysqli_query($highscoreConnect,$sql_delete);
 
  header("Location: succes.php");
-
 }
-
-
 ?>
-
-
-<!--
-if submit delete query
--->
 </body>
 </html>
