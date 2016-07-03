@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
+<<<<<<< HEAD
 <p>
 <table class="table">
     <th>id</th>
@@ -16,33 +16,29 @@
     <th>delete</th>
 
 
+=======
+>>>>>>> origin/master
 <?php
 // Haal comments weg om te zien wat er bij de $_POST meegegeven wordt.
 //      var_dump($_POST);
 
 
-
 // connect met database
 require("connect.php");
         if (isset($_POST['submit'])) {
+            // beveiliging tegen XSS en Injections
             $username = strip_tags($_POST['username']);
             $password = strip_tags($_POST['password']);
         }
-
-
-
-
-
+        
 // query de database
 $resultSet = $connect->query("SELECT * FROM `users`");
-
 
 
     while($rows = $resultSet->fetch_assoc()){
         $name = $rows['username'];
         $pass = $rows['password'];
     }
-
 
 
 if ($username === $name &&  md5($password) === $pass){
@@ -87,16 +83,6 @@ if ($username === $name &&  md5($password) === $pass){
 else {
     header("location: login.php");
 }
-
-
-
-
-
-
-
-
 ?>
-
-
 </body>
 </html>
