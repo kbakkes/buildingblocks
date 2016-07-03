@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-<<<<<<< HEAD
 <p>
 <table class="table">
     <th>id</th>
@@ -15,9 +14,6 @@
     <th>edit</th>
     <th>delete</th>
 
-
-=======
->>>>>>> origin/master
 <?php
 // Haal comments weg om te zien wat er bij de $_POST meegegeven wordt.
 //      var_dump($_POST);
