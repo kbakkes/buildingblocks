@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <div class="header">
+        <div id="titel">Berna's Hair & Beauty Salon</div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="informatie.html">Informatie</a></li>
+            <li><a href="reserveren.php">Reserveren</a></li>
+            <li><a href="Prijzen.html">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobileNavBackground"></div>
+    <div class="content">
+
+        <div class="gegevens">
+            <h2> Openingstijden</h2>
+            <table>
+                <tr>
+                    <td>Maandag</td>
+                    <td>   9:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Dinsdag</td>
+                    <td>   9:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Woensdag</td>
+                    <td>   9:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Donderdag</td>
+                    <td>    9:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Vrijdag</td>
+                    <td>   9:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Zaterdag</td>
+                    <td> 9:00 - 18:00</td>
+                </tr>
+            </table>
+
+
+
+            <h2>Ons Adres</h2>
+            <p>
+                Paul Krügerstraat 121-B <br>
+                3072 GG Rotterdam<br>
+                T. 06 81869009   <br>
+            </p>
+            <button id="infoknop">Bekijk locatie</button>
+            <div id="placeholder"></div>
+        </div>
+
+<script>
+    var map;
+    document.getElementById("infoknop").addEventListener("click",clickhandler);
+
+    function clickhandler(){
+
+        var placeholder = document.getElementById("placeholder");
+        placeholder.setAttribute("id","map");
+        console.log("click");
+        initMap();
+    }
+
+
+
+    function initMap() {
+        var myLatLng = {lat: 51.900092, lng: 4.498393};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Berna´s Hair and Beauty Salon'
+        });
+    }
+
+    google.maps.event.addDomListener(window, "load", initMap);
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt_STJ1GqzlYY86tFXaue9r4mFiEyJrlE&callback=initMap"
+        async defer></script>
+        </div>
+</body>
+</html>

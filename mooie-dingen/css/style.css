@@ -1,0 +1,247 @@
+
+
+body {
+    background-color: #ebd6dc;
+    font-family: Arial;
+}
+
+.header {
+    width: 1000px;
+    height: 200px;
+    background-color: rgb(190, 174, 170);
+    margin: 0 auto;
+    margin-top: 30px;
+    background-image: url(https://stud.hosted.hr.nl/0910135/reserveringsite/reservering/img/Bannerv2.png);
+    border-bottom: solid 5px #b86577;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.nav {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -53px;
+    height: 39px;
+    font-family:  "Arial";
+    font-size: 15px;
+    color: white;
+    border-top-left-radius:   5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    background-color: #a15868;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.3);
+}
+.nav ul li {
+    list-style: none;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.nav ul li a:hover {
+    text-shadow: 0 0 1em white;
+    color: white;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: prop time;
+    -o-transition: prop time;
+    transition: prop time;
+}
+
+.knop {
+    background: #b86577;
+    padding: 17px 10px;
+    border-radius: 10px;
+    left: 15px;
+    margin: 40px auto;
+    color: white;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.knop:hover {
+    background: #c68392;
+
+}
+
+#map
+{
+    width: 500px;
+    height:300px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-left: -70%;
+
+
+}
+#infoknop {
+    width: 100px;
+    height: 60px;
+    background: #b86577;
+    padding: 17px 10px;
+    border-radius: 10px;
+    left: 15px;
+    margin: 40px auto;
+    color: white;
+
+    text-decoration: none;
+    font-size: 15px;
+}
+#infoknop:hover {
+    background: #c68392;
+
+}
+
+.content{
+    width: 1000px;
+    height:1000px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: -11px;
+}
+#titel {
+    margin-top: 37px;
+    margin-right: 27%;
+    width: 700px;
+    height: 10px;
+    float: right;
+    font-size: 35px;
+    font-family: Helvetica;
+    color: white;
+}
+#mainContent {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    padding-top: 10px;
+}
+#mainContent h1 {
+    margin-left: 20%;
+}
+.form {
+
+   position: relative;
+    margin-left: 40%;
+
+}
+
+.gegevens{
+    width: 200px;
+    margin-top: -2%;
+    margin-left: 35%;
+
+}
+
+
+/*Als het scherm kleiner is dan 550px is wordt deze stijl toegepast*/
+@media screen and (max-width: 500px) {
+    body {
+        width: 500px;
+    }
+
+    .header
+    {
+        width: 100%;
+        border-bottom: 1px solid #a15868;
+    }
+
+
+    .nav {
+        border-bottom-left-radius:   0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0 0 0px; rgba(0,0,0, 0.0);
+
+    }
+
+
+    .nav ul {
+    background-color: red;
+    }
+
+    .nav ul li
+    {
+        width: 50%;
+        /*border: 1px solid rgba(161, 31, 78, 1);*/
+        background-color: #a15868;
+        margin-left: 100px;
+    }
+
+    .nav ul li a {
+        font-size:15px;
+
+    }
+
+    .mobileNavBackground
+    {
+        height: 110px;
+        background-color: #a15868;
+
+    }
+    .content {
+        width:100%;
+        background-color: white;
+        border: 1px solid snow;
+        margin: auto;
+    }
+    #mainContent {
+        margin-left:  10%;
+    }
+
+    #titel {
+        margin-top: 30px;
+        width: 300px;
+        height: 10px;
+        float: left;
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: Helvetica;
+        color: white;
+    }
+
+    .form {
+        margin-left: 20%;
+    }
+
+    .gegevens {
+        margin-left: 25%;
+    }
+
+    #map {
+        width: 300px;
+        height:300px;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-left: -30%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+#mainContent {
+    margin-left:20%;
+}
+
+.form{
+    margin-left: 25%;
+}
+.gegevens {
+    margin-left: 25%;
+}
+
+
+
+}
+
+
+
+
+
+
